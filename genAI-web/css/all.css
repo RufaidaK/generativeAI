@@ -1,0 +1,365 @@
+
+top-header{
+         
+    text-align: center;
+    height: 60px;
+}
+
+
+
+/* Navigation Bar CSS */
+
+nav ul{
+	list-style-type: none;
+	font-size: 30px;
+	font-family: 'Roboto';
+	font-weight: bold;
+	width: 100%;
+    height: 100%;
+	background: black;
+	text-align: center;
+	
+	
+}
+
+nav ul li{
+    display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+	line-height: 10px;
+	transition: background 0.5s;
+}
+
+/*CSS for text on navigation bar */
+
+li a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+	color: white;
+	width: 100%;
+	margin: 0 5px;
+}
+
+/*For navbar hover and to ensure no shifting of other links take place while this happens*/
+.navbar-list{
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.navbar a:hover {
+	background-color: #ddd;
+	padding: 10px;
+}
+
+.textonlylinks{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.iconsonlylinks{
+	float: right;
+}
+
+/*Burger menu for navigation bar*/
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.burger-icon::before {
+  transform: translateY(-0.5rem);
+}
+
+.burger-icon::after {
+  transform: translateY(0.5rem);
+}
+
+.nav-links.show {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+}
+
+.nav-links.show ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links.show li {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+/* End of Navigation Bar CSS */
+
+
+
+/* FOR MOST OF THE WRITING IN THE BODY */
+.text{
+	font-size: 18px;
+	color: white;
+}
+
+
+body {
+  background: url('https://www.analyticsinsight.net/wp-content/uploads/2020/07/Artificial-Intelligence-Trends.jpeg--') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+main {
+  padding: 20px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; /*all code till here for footer ensures footer is at the bottom of the page regardless of the amount of content*/
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/*structure for mainpage*/
+.container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.right img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 787px) {
+  .container {
+    grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+  }
+  .left {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0;
+    max-width: none;
+  }
+  .right {
+    margin-bottom: 20px;
+  }
+}
+
+.title{
+	align-items: left;
+	display: flex;  /*causes items to space out and creates a margin around the text. */
+}
+
+
+
+/* Styling title */
+.title h1{
+color: white;
+text-decoration: none;
+font-family:Ariel;
+font-size: 70px;
+font-weight: bold;
+
+}
+
+
+/*Carosel code*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Caption text */
+.caption {
+  color: purple;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*end of carousel*/
+
+/*Reviews page*/
+.aboutmini {
+  text-align: center;
+  font-weight: bold;
+  font-size: 70px;
+  color: white;
+  margin-top: 30px;
+  text-decoration: underline;
+}
+/*Box for reviews*/
+.w-box {
+  width: 90%;
+  max-height: 1000px;
+  background-color:black;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
